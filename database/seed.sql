@@ -117,9 +117,9 @@ BEGIN
     -- These are placeholder values. Use the EF migration approach for real hashes.
     INSERT INTO [dbo].[Users] ([Username], [PasswordHash], [Role], [CreatedAt])
     VALUES
-        ('admin',     'RUN_APP_TO_GENERATE_HASH', 'Admin',    '2024-01-01 00:00:00'),
-        ('customer1', 'RUN_APP_TO_GENERATE_HASH', 'Customer', '2024-01-01 00:00:00'),
-        ('customer2', 'RUN_APP_TO_GENERATE_HASH', 'Customer', '2024-01-01 00:00:00');
+        ('admin',     '$2a$11$mab2P4IJEzsgu19IrXSTMODiGNnQO7ltEMCX73kezWRBCY3fkrKpi', 'Admin',    '2024-01-01 00:00:00'),
+        ('customer1', '$2a$11$YZLDhsCF45ziooAGwB1qLu/vaIXGp11SNNzj/6h.tz6vb9HI.HtD6', 'Customer', '2024-01-01 00:00:00'),
+        ('customer2', '$2a$11$YZLDhsCF45ziooAGwB1qLu/vaIXGp11SNNzj/6h.tz6vb9HI.HtD6', 'Customer', '2024-01-01 00:00:00');
     PRINT 'Seed users inserted. Update PasswordHash values with real BCrypt hashes.';
 END
 GO
